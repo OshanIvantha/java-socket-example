@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class Server extends Thread{
 
@@ -36,6 +37,14 @@ public class Server extends Thread{
                 if (input == null || input.equals(".")) {
                     break;
                 }
+
+                // Splitting the input.
+                // If you are using JSON, you can deserialize here
+                String[] inputList = input.split(",");
+                for(int i = 0; i < inputList.length; i++){
+                    System.out.println("Input " + i + " : " + inputList[i]);
+                }
+
                 out.println(input.toUpperCase());
             }
         } catch (IOException e) {

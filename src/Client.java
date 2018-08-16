@@ -30,7 +30,7 @@ public class Client {
     }
 
     public void talkWithServer() {
-        out.println("Oshan Ivantha");
+        out.println("Oshan,Ivantha");
         String response;
         try {
             response = in.readLine();
